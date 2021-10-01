@@ -25,11 +25,12 @@
         simulação ++;  
         var result = Number(Math.random()) * 10
 
-        if (ipt_numero.value > 10) {
+        if (ipt_numero.value > 10 || ipt_numero.value == '') {
             alert("Numero, Inválido")
+            ipt_numero.value = ''
         }
 
-        if ((ipt_numero.value > 0 || ipt_numero.value <= 10) && ipt_numero.value == result) {
+        if ((ipt_numero.value >= 0 || ipt_numero.value <= 10) && ipt_numero.value == result) {
             text.innerHTML += `${result} `
         }
         
